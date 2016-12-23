@@ -1,25 +1,29 @@
-<div class="main-grid"> <!-- .main, .grid -->
+<div class="main-grid">
 
     <div class="clear-box"></div>
 
     <div class="header col-100">
         <div class="header-text">
-            <h1>CoffeeAlum</h1>
-            <h2>WHERE STUDENTS AND ALUMNI CAN MEET OVER COFFEE</h2>
-            <p class='header-paragraph'>Our mission is simple. We want to give college undergraduates
-                the opportunity to meet alumni and upperclassmen who can offer invaluable experiential
-                advice about what paths are out there. This can range from insights into what the best
-                classes are to which majors offer the best jobs.
+            <h1>CoffeeWork</h1>
+            <h2>THE COWORKING NETWORK</h2>
+            <p class='header-paragraph'>Connect with the makers, the entrepreneurs, and the designers of co-working spaces.
+                Take a look at what the members of your co-working space are up to and grab coffee with them. Not a member yet? That's okay!
+                <br>
+                Join a new co-working space and be a part of the community.
              </p>
-
+        <div style="border:5px; border-style:solid; border-color:white; padding: 3em;" class="border-box">
+             <p style= "font-size: 30px;">The Farm</p>
              <button class="signup-button">
                 <p class="signup">
-                    <%= link_to 'Sign Up', signup_path %>
+                    <%= link_to 'Join', signup_path %>
                 </p>
             </button>
-        </div>
-        <div class='app-button'>
-
+            <button class="signup-button">
+               <p class="signup">
+                   <%= link_to 'View Members', signup_path %>
+               </p>
+           </button>
+         </div>
         </div>
     </div>
 

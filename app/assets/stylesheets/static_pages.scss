@@ -79,26 +79,26 @@ p {
 
 
 .header {
-    height: 80vh;
+    height: 850px;
     background: rgba(74, 189, 172, 0.8);
     color: #F7F7F7;
     text-align: center;
-
-
+    background-image: url("people-office-group-team.png");
+    background-repeat: no-repeat;
 }
+
 
 .header-text{
     width: 80%;
-    margin: auto;
-
-
+    margin:auto;
+    padding: 3em;
 }
 .header-text h1{
   font-size: 1000%;
+  top: 5em;
 }
 .header-text h2{
-
-    font-size: 200%;
+    font-size: 300%;
 
 }
 
@@ -107,19 +107,26 @@ p {
     text-align: center;
     width: 80%;
     margin: auto;
-    font-size: 100%;
+    font-size: 120%;
     font-weight: lighter;
+    letter-spacing: .3px;
+    line-height: 1.5;
+    color: #fffef2;
 }
 
 .signup{
     font-size: 15px;
 }
 
+.border-box{
+    position: relative;
+    top: 8em;
+}
+
 .signup-button{
-    position: absolute;
-    background-color: #F7B733;
+    background-color: #fffef2;
     border: none;
-    padding: 25px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
