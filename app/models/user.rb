@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :projects
   before_save { self.email = email.downcase }
   validates :first_name, presence: true, length: { maximum: 25 }
   validates :last_name, presence: true, length: { maximum: 25 }
