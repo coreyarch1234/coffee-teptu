@@ -1,0 +1,139 @@
+
+body, html{
+	height: 100%;
+}
+body {
+	background-color: #f9f8f8;
+	font-family: "Open Sans Condensed";
+}
+
+.jumbotron {
+	background-color: #64b6ac;
+	color: #f9f8f8;
+/*    font-family: "Roboto Condensed";*/
+    font-family: "Bungee";
+    width: 100%;
+    max-height: 40%;
+}
+
+#addClassButton{
+	font-size: 24px;
+}
+
+.title {
+	font-size: 32px;
+	text-decoration: none;
+    text-transform: capitalize;
+}
+
+input {
+	background-color: transparent;
+	width: 500px;
+	height: 50px;
+	color: black;
+	font-family: 'Abel';
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+a{
+	color: #4c5b61;
+}
+
+a .hover {
+	color: #c5c5c5;
+}
+
+
+.leftContainer {
+    float: left;
+    width: 66.66666%;
+    height: 80%;
+    background-color: #f8e3ce;
+    background-color: #fbebe1;
+    padding: 20px;
+    font-family: "Open Sans Condensed";
+}
+
+.rightContainer {
+	position: relative;;
+    float: right;
+    width: 33.33333%;
+    height: 80%;
+    background-color: #fbebe1;
+    background-color: #f8e3ce;
+    padding: 20px;
+    font-family: "Open Sans Condensed";
+}
+
+// .test {
+// 	background-color: black;
+// }
+
+.desc {
+    font-family: 'Space Mono';
+    font-family: 'Abel';
+    color: #c0fdfb;
+}
+
+.panel-title{
+    font-family: 'Abel';
+}
+
+.button-title{
+	font-family: 'Abel';
+	font-size: 15px;
+}
+
+#signin-container, #signup-container{
+    margin: auto;
+    text-align: center;
+}
+
+#signup-container > input{
+    width: 200px;
+}
+
+.landing-section-one{
+
+	min-height: 100%;
+}
+
+.section {
+	min-height: 100%;
+}
+
+.section-a {
+	background-color: #64b6ac;
+}
+
+.section-b {
+	background-color: #6488ac;
+}
+
+.bottom-button{
+	position: absolute;
+	bottom: 10px;
+}
+
+.external-link-button{
+	position: relative;
+	bottom: 10px;
+    color: #87a0b2;
+}
+
+.login-signup-button{
+	font-family: 'Abel';
+	font-size: 20px;
+	padding: 5px 15px;
+}
+
+// @import "bootstrap";

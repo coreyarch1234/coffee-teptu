@@ -1,21 +1,22 @@
 class SessionsController < ApplicationController
-  def new
-  end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-      log_in user
-      redirect_to user
+    @user = User.find_by_email(params[:email])
+    # If the user exists AND the password entered is correct.
+    if @user && @user.authenticate(params[:password])
+      # Save the user id inside the browser cookie. This is how we keep the user
+      # logged in when they navigate around our website.
+      session[:user_id] = @user.id
+      redirect_to(user_projects_path(@user))
     else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+    # If user's login doesn't work, send them back to the login form.
+      redirect_to '/login'
     end
   end
 
   def destroy
-    log_out
-    redirect_to root_url
+    session[:user_id] = nil
+    redirect_to '/login'
   end
 
 end

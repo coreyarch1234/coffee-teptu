@@ -9,8 +9,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @project = @user.projects.new
+    # @user = User.find(params[:id])
+    # @project = @user.projects.new
+    @user = current_user
+    @project = current_user.projects
+
   end
 
   def new
@@ -27,23 +30,19 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
-    respond_to do |format|
       if @user.save
-        log_in @user
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        session[:user_id] = @user.id
+        redirect_to(user_path(@user))
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        redirect_to '/signup', info: "Passwords must be at least 8 characters long", danger: "Invalid password or email"
       end
     end
-  end
 
   def update
     @user = User.find(params[:id])
+    @user.attributes = user_params
     respond_to do |format|
-      if @user.update(user_params)
+      if @user.save(validate: false)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else

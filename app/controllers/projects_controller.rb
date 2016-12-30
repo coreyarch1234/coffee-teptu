@@ -6,18 +6,19 @@ class ProjectsController < ApplicationController
   end
 
   def new
-      @user = User.find(params[:user_id])
-      @project = Project.new
+    @project = current_user.projects.new
   end
 
   def create
-      @user = User.find(params[:user_id])
-      @project = @user.projects.new(project_params)
+    @project = current_user.projects.new(project_params)
+
       if @project.save
         #   redirect to the user show controller
         redirect_to(controller: "users", action: "show", id: @project.id)
       else
         #   redirect new project form
+        flash[:notice] = "Fill in all fields"
+        redirect_to(new_user_project_path)
       end
   end
 

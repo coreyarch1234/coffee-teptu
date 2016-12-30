@@ -9,17 +9,20 @@
               <%= link_to image_tag('https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'), @user, :class=>"pull-left"%>
             </div>
             <div class="col-md-10">
-              <span class="media-meta pull-right"><%= @user.role %></span>
               <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
-              <h4>Title</h4>
+              <!-- <h4>Title: <%= @user.title %></h4> -->
+              <h3>Title</h3>
               <hr />
-               <p><%= @user.title %></p>
               <h4>About</h4>
-              <hr />
               <p><%= @user.about_me %></p>
-              <h4>Contact</h4>
               <hr />
+              <h4>Contact</h4>
               <p><%= @user.contact %></p>
+              <% current_user.projects.each do |p| %>
+                <hr />
+                <%= p.title %>
+              <% end %>
+              <p><%= link_to 'Add a Project', new_user_project_path(@user) %></p>
               <%= link_to 'Back', users_path %>
               <% if current_user == @user %>
                 <%= link_to 'Edit', edit_user_path(@user) %>
