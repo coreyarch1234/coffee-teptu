@@ -1,2 +1,38 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<%= current_user.projects.each do |p| %>
+    <div class="page-header", id="new-field-text">
+         <div class="jumbotron" style="margin-bottom: 0; ">
+             <br>
+             <div ><%= p.title %></div>
+             <hr>
+        </div>
+    </div>
+
+    <div class="leftContainer">
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h3 class="panel-title">Description</h3>
+          </div>
+            <div ><%= p.description %></div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Resources</h3>
+          </div>
+            <div ><%= p.tools %></div>
+        </div>
+    </div>
+
+
+
+    <div class="rightContainer">
+        <hr>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Media</h3>
+          </div>
+
+        </div>
+    </div>
+<% end %>

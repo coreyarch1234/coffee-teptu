@@ -3,6 +3,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
+      @user = current_user
+      @project = current_user.projects
   end
 
   def new

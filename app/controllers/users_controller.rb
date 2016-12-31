@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :role, :about_me, :title, :contact, :admin)
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :about_me, :coffee_title, :contact)
     #   Took out skill attribute. Remember to delete it completely from model
     end
 

@@ -1,28 +1,45 @@
 <%= form_for(@user) do |f| %>
 
-    <div class="field">
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name, :class=>"form-control" %>
+<div class="page-header", id="new-field-text">
+     <div  style="margin-bottom: 0; ">
+         <br>
+         <div ><%= f.text_field :coffee_title, placeholder: "Title", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+    </div>
+</div>
+
+<div class="page-header", id="new-field-text">
+     <div  style="margin-bottom: 0; ">
+         <br>
+         <div ><%= f.text_field :first_name, placeholder: "First name", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+    </div>
+</div>
+
+    <div class="page-header", id="new-field-text">
+         <div  style="margin-bottom: 0; ">
+             <br>
+             <div ><%= f.text_field :last_name, placeholder: "Last name", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+        </div>
     </div>
 
-    <div class="field">
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name, :class=>"form-control" %>
+    <div class="page-header", id="new-field-text">
+         <div  style="margin-bottom: 0; ">
+             <br>
+             <div ><%= f.text_field :email, placeholder: "Email", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+        </div>
     </div>
 
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.text_field :email, :class=>"form-control" %>
+    <div class="page-header", id="new-field-text">
+         <div  style="margin-bottom: 0; ">
+             <br>
+             <div ><%= f.text_field :about_me, placeholder: "Describe yourself", style: "background-color: transparent; width: 500px; height: 30px; color: black; font-family: 'Bungee'; font-size: 25px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+        </div>
     </div>
 
-    <div class="field">
-      <%= f.label :about_me %>
-      <%= f.text_field :about_me, :class=>"form-control" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :contact %>
-      <%= f.text_field :contact, :class=>"form-control" %>
+    <div class="page-header", id="new-field-text">
+         <div  style="margin-bottom: 0; ">
+             <br>
+             <div ><%= f.text_field :contact, placeholder: "LinkedIn", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+        </div>
     </div>
 
     <div class="actions">
