@@ -1,0 +1,28 @@
+<%= form_for [current_user, @project] do |p| %>
+    <div class="page-header", id="new-field-text">
+         <div class="jumbotron" style="margin-bottom: 0; ">
+             <br>
+             <div ><%= p.text_field :title, placeholder: "Product title", style: "background-color: transparent; width: 500px; height: 100px; color: black; font-family: 'Bungee'; font-size: 50px;" %></div>
+             <hr>
+        </div>
+    </div>
+
+
+    <div class="leftContainer">
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+               <h3 class="panel-title">Description</h3>
+          </div>
+            <div ><%= p.text_field :description, placeholder: "Description", style: "background-color: transparent; width: 500px; height: 100px; color: black; font-family: 'Bungee'; font-size: 50px;" %></div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Resources</h3>
+          </div>
+            <div ><%= p.text_field :tools, placeholder: "Resources", style: "background-color: transparent; width: 500px; height: 100px; color: black; font-family: 'Bungee'; font-size: 50px;" %></div>
+        </div>
+        <%= p.submit "Submit", style: "width: 100%; margin-top: 95px;" %>
+    </div>
+    <% end %>

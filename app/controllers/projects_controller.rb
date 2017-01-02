@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   def show
       @user = current_user
-      @project = current_user.projects
+      @project = current_user.projects.find(params[:id])
   end
 
   def new
@@ -25,13 +25,21 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+      @project = current_user.projects.find(params[:user_id])
   end
 
   def update
+      @project = current_user.projects.find(params[:id])
+      @project.attributes = project_params
+      if @project.save(validate: false)
+        redirect_to(user_project_path(current_user, @project))
+      else
+        redirect_to(edit_user_project_path(current_user, @project))
+      end
   end
 
   def project_params
      params.require(:project).permit(:title, :description, :tools)
- end
+  end
 
 end

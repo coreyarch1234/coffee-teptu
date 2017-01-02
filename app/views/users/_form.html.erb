@@ -12,31 +12,23 @@
       </div>
     <% end %>
     <div class="field">
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name, :class=>"form-control" %>
+      <div ><%= f.text_field :first_name, placeholder: "Name", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+    </div>
+
+
+    <div class="field">
+      <div ><%= f.text_field :email, placeholder: "Email", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
     </div>
 
     <div class="field">
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name, :class=>"form-control" %>
+      <div ><%= f.text_field :password, placeholder: "Password", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
     </div>
 
     <div class="field">
-      <%= f.label :email %>
-      <%= f.text_field :email, :class=>"form-control" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <%= f.password_field :password, :class=>"form-control" %>
-    </div >
-
-    <div class="field">
-      <%= f.label :password_confirmation, "Password Confirmation" %>
-      <%= f.password_field :password_confirmation, :class=>"form-control" %>
+      <div ><%= f.text_field :password_confirmation, placeholder: "Confirm Password", style: "background-color: transparent; width: 500px; height: 20px; color: black; font-family: 'Bungee'; font-size: 20px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
     </div>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit 'Next', class: "button-secondary" %>
     </div>
   <% end %>
