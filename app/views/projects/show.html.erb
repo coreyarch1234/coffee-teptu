@@ -2,7 +2,7 @@
     <div class="page-header", id="new-field-text">
          <div class="jumbotron" style="margin-bottom: 0; ">
              <br>
-             <div ><%=  @project.title %></div>
+             <div class= "title-block"><%=  @project.title %></div>
              <hr>
         </div>
     </div>
@@ -11,16 +11,50 @@
         <br>
         <div class="panel panel-default">
           <div class="panel-heading">
-               <h3 class="panel-title">Description</h3>
+               <div class="panel-title title-block-2">Description</div>
           </div>
             <div ><%=  @project.description %></div>
         </div>
         <hr>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Resources</h3>
+            <div class="panel-title title-block-2">Resources</div>
           </div>
             <div ><%= @project.tools %></div>
         </div>
     </div>
-    <h3 class="button-title" style="display: inline-block; margin-right: 15px;"><%= link_to 'Edit', edit_user_project_path(current_user, @project)%></h3>
+    <div class="button-title button-secondary" style="display: inline-block; font: 13px; margin-right: 15px;"><%= link_to 'Edit', edit_user_project_path(current_user, @project)%></div>
+
+    <style>
+
+        .title-block{
+            background-color: transparent;
+            width: 100%;
+            height: 50px;
+            color: black;
+            font-family: 'Helvetica';
+            font-size: 50px;
+            border: none;
+        }
+
+        .button-secondary{
+          width: 30%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .title-block-2{
+            background-color: transparent;
+            width: 100%;
+            height: 20px;
+            color: black;
+            font-family: 'Helvetica';
+            font-size: 20px;
+            border: none;
+        }
+    </style>

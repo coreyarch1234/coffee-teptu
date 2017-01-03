@@ -3,7 +3,7 @@
     <div class="page-header", id="new-field-text">
          <div class="jumbotron" style="margin-bottom: 0; ">
              <br>
-             <div ><%= p.text_field :title, placeholder: " Product title", style: "background-color: transparent; width: 100%; height: 75px; color: black; font-family: 'Bungee'; font-size: 50px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+             <div ><%= p.text_field :title, placeholder: " Product title", style: "background-color: transparent; width: 100%; height: 50px; color: black; font-family: 'Helvetica'; font-size: 50px; border: none;, border-left-style: solid;" %></div>
              <hr>
         </div>
     </div>
@@ -11,19 +11,27 @@
     <div class="">
         <br>
         <div class="panel panel-default">
-          <div class="panel-heading">
-               <h3 class="panel-title">Overview</h3>
-          </div>
-            <div ><%= p.text_area :description, placeholder: "What's your product about? What inspired you? What's the impact?", style:"background-color: transparent; width: 100%; height: 150px; color: black; font-family: 'Open Sans Condensed'; font-size: 16px; border: none; border-left: 1px; border-left-style: solid; " %></div>
+            <div ><%= p.text_area :description, placeholder: "What's your product about? What inspired you? What's the impact?", style: "background-color: transparent; width: 100%; height: 80px; color: black; font-family: 'Helvetica'; font-size: 20px; border: none;, border-left-style: solid;" %></div>
         </div>
         <hr>
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Resources Used</h3>
-          </div>
-            <div ><%= p.text_area :tools, placeholder: " Frameworks, libraries, languages, API, etc...", style:"background-color: transparent; width: 100%; height: 48px; color: black; font-family: 'Open Sans Condensed'; font-size: 16px; border: none; border-left: 1px; border-left-style: solid;" %></div>
+            <div ><%= p.text_area :tools, placeholder: " What are some resources or tools you used in the development process? Survey Monkey, Ruby On Rails, etc. This will help others connect with you.", style: "background-color: transparent; width: 100%; height: 80px; color: black; font-family: 'Helvetica'; font-size: 20px; border: none;, border-left-style: solid;" %></div>
         </div>
-        <%= p.submit "Submit", style: "width: 100%;" %>
+        <%= p.submit "Submit", class: "button-secondary" %>
     </div>
 
 <% end %>
+
+<style>
+
+    .button-secondary{
+      width: 30%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+</style>

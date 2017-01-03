@@ -9,29 +9,12 @@
             <p class='header-paragraph'>Connect with the makers, the entrepreneurs, and the designers of co-working spaces.
                 Take a look at what the members of your co-working space are up to and grab coffee with them.
             </p>
-        <div style="border:5px; border-style:solid; border-color:white; padding: 3em;" class="border-box">
-             <p style= "font-size: 30px;">The Farm</p>
-             <button class="signup-button">
-                <p class="signup">
-                    <%= link_to 'Join', signup_path %>
-                </p>
-            </button>
-            <button class="signup-button">
-               <p class="signup">
-                   <%= link_to 'View Members', signup_path %>
-               </p>
-           </button>
-         </div>
         </div>
     </div>
 
     <div class="clear-box"></div>
 
     <div class="signup-wrapper col-md-offset-2 col-md-8">
-    <h1>Join CoffeeWork</h1>
-
       <%= render 'form', user: @user %>
-
-      <%= link_to 'Back', users_path %>
     <div>
 </div>

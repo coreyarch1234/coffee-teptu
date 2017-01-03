@@ -6,7 +6,7 @@
                 <form class="form-inline" role="form">
                     <%= form_tag(users_path, :method => "get") do %>
                     <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
-                    <%= submit_tag "Search" %>
+                    <%= submit_tag "Search", class: "button-secondary" %>
                     <% end %>
                 </form>
             </div>
@@ -14,3 +14,17 @@
     </div>
   </div>
 </div>
+
+<style>
+    .button-secondary{
+      width: 30%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+</style>

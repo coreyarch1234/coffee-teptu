@@ -11,19 +11,18 @@
                 </div>
                 <div class="icon-bar col-md-2 update">
                   <% if current_user == @user %>
-                    <%= link_to 'Update Profile', edit_user_path(@user) %>
+                    <div class="contact-link"><%= link_to 'Update Profile', edit_user_path(@user) %></div>
                   <% else %>
-                    <%= link_to "Contact User", edit_user_path(@user) %>
+                    <div class="contact-link"><%= link_to image_tag("LinkedIn"), edit_user_path(@user) %></div>
                   <% end %>
                 </div>
 
 
             <div class="col-md-10">
-              <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
-              <h3><%= @user.coffee_title %></h3>
-              <h3>About Me</h3>
-              <h4><%= @user.about_me %></h4>
-              <h5><%= @user.contact %></h5>
+              <div class="name-title"><%= "#{@user.first_name} #{@user.last_name}" %></div>
+              <div class="coffee-title"><%= @user.coffee_title %></div>
+              <div class="headers">Description</div>
+              <div class="about-me"><%= @user.about_me%></div>
             </div>
           </div>
         </td>
@@ -39,17 +38,13 @@
       <tr>
         <td>
           <div class="media">
-            <div class="col-md-2">
-              <%= link_to image_tag('https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'), @user, :class=>"pull-left"%>
-            </div>
             <div class="col-md-10">
-              <h3>Projects</h3>
+              <div class="headers">Projects</div>
               <% current_user.projects.each do |p| %>
                 <h4><%= link_to p.title, user_project_path(@user, p) %></h4>
                 <hr />
               <% end %>
               <p><%= link_to 'Add a Project', new_user_project_path(@user) %></p>
-              <%= link_to 'Back', users_path %>
             </div>
           </div>
         </td>
@@ -61,8 +56,40 @@
 
 <style>
 
+
     .update{
         top: 50px;
+    }
+
+    .contact-link{
+        font-size: 15px;
+        font-family: 'Helvetica';
+        padding-top: 10px;
+
+    }
+
+    .headers{
+        font-size: 25px;
+        font-family: 'Helvetica';
+        padding-top: 10px;
+    }
+
+    .name-title{
+        font-size: 25px;
+        font-family: 'Helvetica';
+        padding-top: 15px;
+    }
+
+    .coffee-title{
+        font-size: 16px;
+        font-family: 'Helvetica';
+        padding-top: 5px;
+    }
+
+    .about-me{
+        font-size: 15px;
+        font-family: 'Helvetica';
+        padding-top: 10px;
     }
     /*Profile Picture Movement Up*/
     .col-md-2{
