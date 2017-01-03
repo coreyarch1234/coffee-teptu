@@ -1,4 +1,39 @@
-<div class="result-wrapper col-md-8 col-md-offset-2">
+
+<div class="result-wrapper col-md-8 col-md-offset-1 ">
+  <table class="table table-filter">
+    <tbody>
+      <tr>
+        <td>
+          <div class="media">
+
+                <div class="col-md-2 floater">
+                  <div><%= link_to image_tag('https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'), @user, :class=>"pull-left"%></div>
+                </div>
+                <div class="icon-bar col-md-2 update">
+                  <% if current_user == @user %>
+                    <%= link_to 'Update Profile', edit_user_path(@user) %>
+                  <% else %>
+                    <%= link_to "Contact User", edit_user_path(@user) %>
+                  <% end %>
+                </div>
+
+
+            <div class="col-md-10">
+              <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
+              <h3><%= @user.coffee_title %></h3>
+              <h3>About Me</h3>
+              <h4><%= @user.about_me %></h4>
+              <h5><%= @user.contact %></h5>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="result-wrapper col-sm-4 ">
   <table class="table table-filter">
     <tbody>
       <tr>
@@ -8,33 +43,31 @@
               <%= link_to image_tag('https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'), @user, :class=>"pull-left"%>
             </div>
             <div class="col-md-10">
-              <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
-              <h3><%= @user.coffee_title %></h3>
-              <hr />
-              <h4><%= @user.about_me %></h4>
-              <hr />
-              <h5><%= @user.contact %></h5>
+              <h3>Projects</h3>
               <% current_user.projects.each do |p| %>
+                <h4><%= link_to p.title, user_project_path(@user, p) %></h4>
                 <hr />
-                <h2><%= link_to p.title, user_project_path(@user, p) %></h2>
               <% end %>
               <p><%= link_to 'Add a Project', new_user_project_path(@user) %></p>
               <%= link_to 'Back', users_path %>
-              <% if current_user == @user %>
-                <%= link_to 'Edit', edit_user_path(@user) %>
-              <% end %>
             </div>
           </div>
         </td>
       </tr>
     </tbody>
   </table>
-<div>
+</div>
+
 
 <style>
+
+    .update{
+        top: 50px;
+    }
     /*Profile Picture Movement Up*/
     .col-md-2{
         margin-right: 50px;
+
     }
 
     /*About Me Movement Down*/
@@ -42,5 +75,19 @@
         margin-top: 30px;
     }
 
+    .col-md-offset-1 {
+        margin-left: 5%;
+    }
+
+    .col-md-8 {
+        width: 50%;
+        top: 90px;
+    }
+
+    .col-sm-4 {
+        width: 33.333%;
+        margin-left: 6%;
+        top: 90px;
+    }
 
 </style>

@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="leftContainer">
+    <div class="">
         <br>
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -23,17 +23,4 @@
             <div ><%= @project.tools %></div>
         </div>
     </div>
-
-
-
-    <div class="rightContainer">
-        <hr>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Media</h3>
-          </div>
-
-        </div>
-    </div>
-    <h3 class="button-title" style="display: inline-block; margin-right: 15px;"><%= link_to 'Back', user_path(current_user)%></h3>
     <h3 class="button-title" style="display: inline-block; margin-right: 15px;"><%= link_to 'Edit', edit_user_project_path(current_user, @project)%></h3>

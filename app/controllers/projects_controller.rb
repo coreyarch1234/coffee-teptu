@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
 
       if @project.save
         #   redirect to the user show controller
-        redirect_to(controller: "users", action: "show", id: @project.id)
+        redirect_to(controller: "users", action: "show", id: current_user.id)
       else
         #   redirect new project form
         flash[:notice] = "Fill in all fields"
@@ -25,7 +25,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-      @project = current_user.projects.find(params[:user_id])
+      @project = current_user.projects.find(params[:id])
   end
 
   def update

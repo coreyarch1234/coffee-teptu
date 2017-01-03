@@ -3,12 +3,12 @@
     <div class="page-header", id="new-field-text">
          <div class="jumbotron" style="margin-bottom: 0; ">
              <br>
-             <div ><%= p.text_field :title, placeholder: " Product title", style: "background-color: transparent; width: 500px; height: 75px; color: black; font-family: 'Bungee'; font-size: 50px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
+             <div ><%= p.text_field :title, placeholder: " Product title", style: "background-color: transparent; width: 100%; height: 75px; color: black; font-family: 'Bungee'; font-size: 50px; border: none;, border-left: 1px; border-left-style: solid;" %></div>
              <hr>
         </div>
     </div>
 
-    <div class="leftContainer">
+    <div class="">
         <br>
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -23,19 +23,7 @@
           </div>
             <div ><%= p.text_area :tools, placeholder: " Frameworks, libraries, languages, API, etc...", style:"background-color: transparent; width: 100%; height: 48px; color: black; font-family: 'Open Sans Condensed'; font-size: 16px; border: none; border-left: 1px; border-left-style: solid;" %></div>
         </div>
-    </div>
-
-
-
-    <div class="rightContainer">
-        <hr>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Media</h3>
-          </div>
-            <!-- <div ><%= p.text_area :tools, placeholder: " Frameworks, libraries, languages, API, etc...", style:"background-color: transparent; width: 90%; height: 48px; color: black; font-family: 'Open Sans Condensed'; font-size: 16px; border: none; border-left: 1px; border-left-style: solid;" %></div> -->
-        </div>
-        <hr>
         <%= p.submit "Submit", style: "width: 100%;" %>
     </div>
+
 <% end %>
